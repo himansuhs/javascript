@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .invisible {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>vegetables</h1>
+  <ul>
+    <li>Potato</li>
+    <li>Onion</li>
+    <li>Garlic</li>
+    <li>Carrot</li>
+    <li>Beans</li>
+    <li>Beetroot</li>
+
+  </ul>
+  <button onclick="listadd()">Remove Data</button>
+  <script>
+    let list = document.querySelector('ul');
+    list.classList.toggle('invisible')
+  </script>
+</body>
+
+</html>

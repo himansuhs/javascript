@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+  <h1>vegetables</h1>
+  <ul>
+    <li>Potato</li>
+    <li>Onion</li>
+    <li>Garlic</li>
+    <li>Carrot</li>
+    <li>Beans</li>
+    <li>Beetroot</li>
+
+  </ul>
+  <button onclick="erasedata()">Remove Data</button>
+  <br>
+  <br>
+  <button onclick="getdata()">Get data</button>
+  <script type="text/javascript">
+    let initialData = document.querySelector('ul').innerHTML
+
+    function erasedata() {
+      let list = document.querySelector('ul');
+      list.innerHTML = " ";
+    }
+    function getdata() {
+      let get = document.querySelector('ul');
+      get.innerHTML = initialData;
+    }
+  </script>
+</body>
+
+</html>
