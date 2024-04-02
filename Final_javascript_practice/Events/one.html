@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .btn:active {
+      background-color: #0056b3;
+      transform: translateY(1px);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="allbt">
+    <div id="but1">
+      <button id="bt1" class="btn1 btn">Button 1</button>
+    </div>
+    <div id="but2">
+      <button id="bt2" class="btn2 btn">Button 2</button>
+    </div>
+    <div id="but3">
+      <button id="bt3" class="btn3 btn">Button 3</button>
+    </div>
+  </div>
+  <a href="https://www.google.com/" id="google">Google</a>
+
+
+</body>
+<script>
+  // document.getElementById('bt1').onClick = () => {
+  //   alert('clicked')
+  // }
+  // document.getElementById('bt1').addEventListener('click', () => {
+  //   alert('clicked')
+  // }, false)
+  //type
+  //timestamp
+  // defaultprevented we can stop any default behavior
+  //target srcElement,currentTarget
+  //clientX,clientY,screen
+
+  // document.querySelector('div').addEventListener('click', () => {
+  //   console.log('div clicked')
+  // }) //false event propogation bubbling -child to parent
+  // document.querySelector('#bt2').addEventListener('click', (e) => {
+  //   console.log('btn2 clicked')
+  //   e.stopPropagation()
+  // }) // true event propogation capturing -parent to child
+
+  // document.getElementById('google').addEventListener('click', (e) => {
+  //   e.preventDefault()
+
+  // })
+
+
+  // project 
+  document.querySelector('#allbt').addEventListener('click', (e) => {
+    console.log(e.target.tagName);
+    if (e.target.tagName === 'BUTTON') {
+      let removeit = e.target.parentNode
+      console.log(removeit);
+      removeit.remove()
+    }
+  })
+
+</script>
+
+</html>

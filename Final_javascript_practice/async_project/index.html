@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>himansu</h1>
+  <button id="stop">stop</button>
+</body>
+<script>
+  // setTimeout(() => {
+  //   console.log('himansu');
+  // }, 2000)
+  // const printme = () => {
+  //   console.log('himansui');
+  // }
+  // setTimeout(printme, 2000)
+  const changeName = () => {
+    document.querySelector('h1').innerHTML = 'himansu_gh'
+  }
+  const changeme = setTimeout(changeName, 2000)
+  document.querySelector('#stop').addEventListener('click', () => {
+    clearTimeout(changeme)
+  })
+</script>
+
+</html>
